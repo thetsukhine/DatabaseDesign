@@ -1,0 +1,177 @@
+﻿@model DatabaseDesign.Models.HealthDeclaration
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>HealthDeclaration</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div class="form-group row">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="col-md-3">
+                    <label asp-for="Name" class="control-label"></label>
+                    </div>
+                    <div class="col-md-6">
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                </div>
+           
+            @*<div class="form-group">
+               
+               
+            </div>*@
+            <div class="form-group row">
+                 <div class="col-md-3">
+                    <label asp-for="BusinessEmail" class="control-label"></label>
+                     </div>
+                <div class="col-md-6">
+                    <input asp-for="BusinessEmail" class="form-control" />
+                    <span asp-validation-for="BusinessEmail" class="text-danger"></span>
+                     </div>             
+               
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label asp-for="CompanyName" class="control-label"></label>
+                </div>
+                <div class="col-md-6">
+                    <input asp-for="CompanyName" class="form-control" />
+                    <span asp-validation-for="CompanyName" class="text-danger"></span>
+                    </div>
+               
+              
+            </div>
+           
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label asp-for="Designation" class="control-label"></label>
+                </div>
+                <div class="col-md-6">
+                    <input asp-for="Designation" class="form-control" />
+                    <span asp-validation-for="Designation" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label asp-for="BusinessNumber" class="control-label"></label>
+                </div>
+                <div class="col-md-6">
+                    <input asp-for="BusinessNumber" class="form-control" />
+                    <span asp-validation-for="BusinessNumber" class="text-danger"></span>
+                </div>               
+               
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label asp-for="LicensePlate" class="control-label"></label>
+                </div>
+                <div class="col-md-6">
+                    <input asp-for="LicensePlate" class="form-control" />
+                    <span asp-validation-for="LicensePlate" class="text-danger"></span>
+                </div>
+
+            </div>
+            
+            <div class="form-group row">
+                <div class="col-md-3">
+                    <label asp-for="NRIC" class="control-label"></label>
+                </div>
+                <div class="col-md-6">
+                    <input asp-for="NRIC" class="form-control" />
+                    <span asp-validation-for="NRIC" class="text-danger"></span>
+                </div>
+               
+               
+            </div>
+            <div class="form-group row">
+               
+                <label asp-for="QuarantineOrder" class="control-label">  Are you currently under a Quarantine Order, Syat-Home Notice? </label>
+                </div>            
+            <div class="form-group row">
+                <div class="col-md-3">
+                    
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="QuarantineOrder" class="control-label"> Yes </label>
+                    <input type="radio" asp-for="QuarantineOrder" id="Yes" value="true" checked  required />
+                    <label asp-for="QuarantineOrder" class="control-label"> No </label>
+                    <input type="radio" asp-for="QuarantineOrder" id="No" value="false" />
+                    <span asp-validation-for="QuarantineOrder" class="text-danger"></span>
+                </div>
+               
+               
+            </div>
+            <div class="form-group row">
+                <label asp-for="CloseContact" class="control-label"> Have you had close contact with a confirmed COVID-19 case in the past 14 days </label>
+                </div>
+
+            <div class="form-group row">
+                <div class="col-md-3">                   
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="CloseContact" class="control-label"> Yes </label>
+                    <input type="radio" asp-for="CloseContact" id="Yes" value="true" checked required />
+                    <label asp-for="CloseContact" class="control-label"> No </label>
+                    <input type="radio" asp-for="CloseContact" id="No" value=false />
+                    <span asp-validation-for="CloseContact" class="text-danger"></span>
+                </div>
+               
+               
+            </div>
+            <div class="form-group row">
+                <label asp-for="Fever" class="control-label"> Do you have any fever on flu-like symptoms? </label>
+                </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                   
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Fever" class="control-label"> Yes </label>
+                    <input type="radio" asp-for="Fever" id="Yes" value="true" checked required />
+                    <label asp-for="Fever" class="control-label"> No </label>
+                    <input type="radio" asp-for="Fever" id="No" value=false />
+                    <span asp-validation-for="Fever" class="text-danger"></span>
+                </div>
+               
+               
+            </div>
+             <div class="form-group row">
+                <label asp-for="Agreement" class="control-label">
+                    By completing this online form, I acknowledge and consent to the collection, use and disclosure
+                    of my personal data for security verification, access control and safety purposes
+                </label>
+                 </div>
+            <div class="form-group row">
+                <div class="col-md-3">
+                    
+                </div>
+                <div class="col-md-1">
+                    <input type="checkbox" asp-for="Agreement" value="true" checked width="100px" />
+                    @*class="form-control"*@
+
+                    <span asp-validation-for="Agreement" class="text-danger"></span>
+                </div>        
+                
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
